@@ -1,0 +1,21 @@
+{
+    "name": "magenizr/magento2-suezcanal",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "OSL-3.0",
+    "description": "Display a simple notification across your store and let your customers know about potential supply shortage.",
+    "keywords": [
+        "Magento 2",
+        "Custom",
+        "Notifications",
+        "Alerts"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magenizr\\SuezCanal\\": ""
+        }
+    }
+}

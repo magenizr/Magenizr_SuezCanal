@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magenizr SuezCanal
+ *
+ * @category    Magenizr
+ * @package     Magenizr_SuezCanal
+ * @copyright   Copyright (c) 2021 Magenizr (https://www.magenizr.com)
+ * @license     https://www.magenizr.com/license Magenizr EULA
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+
+        <section id="magenizr_suezcanal" translate="label" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Suez Canal</label>
+            <tab>sales</tab>
+            <resource>Magenizr_SuezCanal::notification</resource>
+
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Disable the module temporarily. Default: No]]></comment>
+                </field>
+
+                <field id="style" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Style</label>
+                    <source_model>Magenizr\SuezCanal\Model\Config\Source\Style</source_model>
+                    <comment><![CDATA[Choose a pre-defined style for the notification bar. Default: Warning]]></comment>
+                </field>
+
+                <field id="notification" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Notification</label>
+                    <comment>
+                        <![CDATA[Enter the text that should appear across your store.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+
+        </section>
+    </system>
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magenizr SuezCanal
+ *
+ * @category    Magenizr
+ * @package     Magenizr_SuezCanal
+ * @copyright   Copyright (c) 2021 Magenizr (https://www.magenizr.com)
+ * @license     https://www.magenizr.com/license Magenizr EULA
+ */
+-->
+
+<page  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magenizr_SuezCanal::css/source/styles.css"/>
+    </head>
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Magenizr\SuezCanal\Block\Notification" name="magenizr_suezcanal_block" template="Magenizr_SuezCanal::notification.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magenizr SuezCanal
+ *
+ * @category    Magenizr
+ * @package     Magenizr_SuezCanal
+ * @copyright   Copyright (c) 2021 Magenizr (https://www.magenizr.com)
+ * @license     https://www.magenizr.com/license Magenizr EULA
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <magenizr_suezcanal>
+            <general>
+                <status>0</status>
+                <style>warning</style>
+                <notification><![CDATA[<strong>Suez Canal</strong>: Some products might be out of stock due to a supply shortage.]]></notification>
+            </general>
+        </magenizr_suezcanal>
+    </default>
+</config>
