@@ -41,7 +41,7 @@ class Notification extends \Magento\Framework\View\Element\Template
      * @return mixed
      */
     public function getClass() {
-        return $this->helper->getConfig('general/style');
+        return $this->getHelper()->getConfig('general/style');
 
     }
 
@@ -49,7 +49,14 @@ class Notification extends \Magento\Framework\View\Element\Template
      * @return mixed
      */
     public function getContent() {
-        return $this->helper->getConfig('general/notification');
+        return $this->getHelper()->getConfig('general/notification');
+    }
+
+    /**
+     * @return Magenizr\SuezCanal\Helper
+     */
+    public function getHelper() {
+        return $this->helper;
     }
 
     /**
