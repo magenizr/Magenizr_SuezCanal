@@ -67,4 +67,12 @@ class Notification extends \Magento\Framework\View\Element\Template
     {
         return $this->templateProcessor->filter($string);
     }
+	
+    /**
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->helper->isEnabled();
+    }
 }
