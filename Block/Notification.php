@@ -1,24 +1,19 @@
 <?php
+declare(strict_types=1);
 /**
  * Magenizr SuezCanal
  *
- * @category    Magenizr
- * @package     Magenizr_SuezCanal
- * @copyright   Copyright (c) 2021 Magenizr (https://www.magenizr.com)
- * @license     https://www.magenizr.com/license Magenizr EULA
+ * @category  Magenizr
+ * @copyright Copyright (c) 2021 - 2022 Magenizr (https://www.magenizr.com)
+ * @license   https://www.magenizr.com/license Magenizr EULA
  */
 
 namespace Magenizr\SuezCanal\Block;
 
-/**
- * Class Notification
- *
- * @package Magenizr\SuezCanal\Block
- */
 class Notification extends \Magento\Framework\View\Element\Template
 {
     /**
-     * Notification constructor.
+     * Init Constructor
      *
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magenizr\SuezCanal\Helper\Data $helper
@@ -38,33 +33,43 @@ class Notification extends \Magento\Framework\View\Element\Template
     }
 
     /**
+     * Return CSS class
+     *
      * @return mixed
      */
-    public function getClass() {
+    public function getClass()
+    {
         return $this->getHelper()->getConfig('general/style');
-
     }
 
     /**
+     * Return content for notification
+     *
      * @return mixed
      */
-    public function getContent() {
+    public function getContent()
+    {
         return $this->getHelper()->getConfig('general/notification');
     }
 
     /**
-     * @return Magenizr\SuezCanal\Helper
+     * Run string through a filter
+     *
+     * @param string $content
+     * @return mixed
      */
-    public function getHelper() {
-        return $this->helper;
+    public function filterOutputHtml($content)
+    {
+        return $this->templateProcessor->filter($content);
     }
 
     /**
-     * @param $string
-     * @return mixed
+     * Return Helper
+     *
+     * @return Magenizr\SuezCanal\Helper
      */
-    public function filterOutputHtml($string)
+    public function getHelper()
     {
-        return $this->templateProcessor->filter($string);
+        return $this->helper;
     }
 }

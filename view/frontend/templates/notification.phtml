@@ -2,20 +2,19 @@
 /**
  * Magenizr SuezCanal
  *
- * @category    Magenizr
- * @package     Magenizr_SuezCanal
- * @copyright   Copyright (c) 2021 Magenizr (https://www.magenizr.com)
- * @license     https://www.magenizr.com/license Magenizr EULA
+ * @category  Magenizr
+ * @copyright Copyright (c) 2021 - 2022 Magenizr (https://www.magenizr.com)
+ * @license   https://www.magenizr.com/license Magenizr EULA
  */
 ?>
 
-<?php if ($block->getHelper()->isEnabled()) : ?>
+<?php if ($block->getHelper()->isEnabled()): ?>
 
     <?php $class = $block->getClass() ?>
 
     <div id="magenizr-suezcanal">
-        <div class="content alert alert-<?php echo (!empty($class)) ? $block->escapeHtml($class) : ''; ?>">
-            <?php echo $block->filterOutputHtml($block->getContent()); ?>
+        <div class="content alert alert-<?= (!empty($class)) ? $block->escapeHtml($class) : ''; ?>">
+            <?= $block->filterOutputHtml($block->getContent()); ?>
         </div>
     </div>
 

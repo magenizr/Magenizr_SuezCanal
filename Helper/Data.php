@@ -1,19 +1,15 @@
 <?php
+declare(strict_types=1);
 /**
  * Magenizr SuezCanal
  *
- * @category    Magenizr
- * @package     Magenizr_SuezCanal
- * @copyright   Copyright (c) 2021 Magenizr (https://www.magenizr.com)
- * @license     https://www.magenizr.com/license Magenizr EULA
+ * @category  Magenizr
+ * @copyright Copyright (c) 2021 - 2022 Magenizr (https://www.magenizr.com)
+ * @license   https://www.magenizr.com/license Magenizr EULA
  */
 
 namespace Magenizr\SuezCanal\Helper;
 
-/**
- * Class Data
- * @package Magenizr\SuezCanal\Helper
- */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
@@ -27,7 +23,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     private $request;
 
     /**
-     * Data constructor.
+     * Init Constructor
+     *
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
      */
     public function __construct(
@@ -39,7 +36,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get module configuration values from core_config_data
      *
-     * @param $setting
+     * @param string $setting
      * @return mixed
      */
     public function getConfig($setting)
