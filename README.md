@@ -1,5 +1,3 @@
----
-
 # Suez Canal
 Display a simple notification across your store and let your customers know about potential supply shortages.
 
